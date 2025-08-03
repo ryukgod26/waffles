@@ -33,6 +33,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
 }
 .display input {
     width: 100%;
@@ -126,5 +127,6 @@ body {
     color: #a0522d;
     font-weight: 500;
 }
+
 
 
