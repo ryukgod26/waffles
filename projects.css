@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    padding-top: 80px; 
+}
+
+
+.main-content {
+    margin-top: 100px; 
+    padding: 20px;
+}
 .calculator {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
@@ -116,3 +125,4 @@
     color: #a0522d;
     font-weight: 500;
 }
+
