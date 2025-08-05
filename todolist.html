@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+    }
+       .dark-mode{
+        background-color: black;
+        color: white;
+        
+    }
+</style>
+<body>
+    <nav style="background-color: green;">
+        <ul>
+            <li><a href="index.html">My Drawing App</a></li>
+        </ul>
+    </nav>
+    <button style="display: block; margin-left: auto;"  id="toggle">Dark Mode</button>
+
+    <h1>To Do List</h1>
+        <input required placeholder="task" id="task_name" >
+        <button id="submit" >submit</button>
+        <button id="remove">Remove</button>
+        <h1>Tasks</h1><br>
+    <div id="task_list"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+    function darkModeToggle(){
+        if(document.body.classList.contains('dark-mode')){
+        document.body.classList.toggle('dark-mode');
+        document.getElementById('toggle').textContent = 'Dark Mode';
+        }
+        else{
+        document.body.classList.toggle('dark-mode')
+        document.getElementById('toggle').textContent = 'Light Mode';
+        }
+        
+    }
+        document.getElementById('toggle').onclick = darkModeToggle;
+let tasks = [];
+   document.getElementById('submit').onclick=addItem;
+document.getElementById('remove').onclick = removeItem;
+    task_list = document.getElementById('task_list');
+    function addItem(){
+        console.log(document.getElementById('task_name').value)
+        task = document.getElementById('task_name').value;
+        if(task.trim() !== ''){
+        tasks.push(task);
+        displayItems();
+        document.getElementById('task_name').value = '';
+        console.log(tasks);
+        }
+    }
+
+    function displayItems(){
+        task_list.innerHTML = '';
+        for(let i =0; i<tasks.length;i++){
+            const temp = document.createElement('h2');
+            temp.textContent = tasks[i];
+            task_list.appendChild(temp)
+        }
+    }
+
+    function removeItem(){
+        tasks.pop();
+        displayItems();
+        console.log(tasks)
+    }
+    
+
+});
+
+
+    </script>
+</body>
+</html>

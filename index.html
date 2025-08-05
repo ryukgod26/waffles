@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="home.css">
 </head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+    }
+    h1{
+        text-align: center;
+    }
+    .dark-mode{
+        background-color: black;
+        color: white;
+        
+    }
+    .drawing-canvas{
+        display: block;
+        width: 450px;
+        height: 450px;
+        background-color: aqua;
+        margin: auto;
+    }
+</style>
 <body>
-    <header class="header">
-    <nav>
-        <div class="nav-container">
-            <div class="head-title">
-              <h1>  Small Projects Website</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-            </ul>
-        </div>
+    <nav style="background-color: green;">
+        <ul>
+            <li><a href="todolist.html">To Do List</a></li>
+        </ul>
     </nav>
-    </header>
+    <button style="display: block; margin-left: auto;"  id="toggle">Dark Mode</button>
+    <h1>My Drawing App</h1>
+    <canvas id="canvas" class="drawing-canvas">
+    </canvas>
 
-    <section >
-        <div class="content">
-            <h2>This is a small Website created by me. It has some small Projects. Which you can test by clicking the buttons in the navbar. Just Enjoy the Projects in my Website.</h2>
-        </div>
-    </section>
-
-<script src="home.js"></script>
+    <script src="index.js"></script>
 </body>
-
 </html>
